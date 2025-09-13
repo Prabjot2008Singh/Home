@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Other Websites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 900px;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .website-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .website-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .website-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .website-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .website-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .visit-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .visit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer Styles */
+        .footer {
+            width: 100%;
+            max-width: 900px;
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .websites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                padding: 15px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .website-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .website-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .footer {
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Other Websites</h1>
+        <p class="subtitle">Explore our collection of useful tools and creative resources</p>
+        
+        <div class="websites-grid">
+            <div class="website-card">
+                <div class="icon">🌐</div>
+                <h2 class="website-title">Official Website</h2>
+                <p class="website-description">
+                    Our main website featuring the latest updates, announcements, and comprehensive information about all our services and projects. Your central hub for everything we offer.
+                </p>
+                <a href="https://prabjot2008singh.blogspot.com/" target="_blank" class="visit-btn">
+                    Visit Official Website →
+                </a>
+            </div>
+
+            <div class="website-card">
+                <div class="icon">🎨</div>
+                <h2 class="website-title">Royal Images</h2>
+                <p class="website-description">
+                    A curated collection of stunning visuals and creative imagery. Discover beautiful photographs, artistic designs, and visual inspiration for your projects and creative endeavors.
+                </p>
+                <a href="https://royal7images.blogspot.com/" target="_blank" class="visit-btn">
+                    Visit Royal Images →
+                </a>
+            </div>
+
+            <div class="website-card">
+                <div class="icon">📄</div>
+                <h2 class="website-title">PDF Master</h2>
+                <p class="website-description">
+                    A powerful suite of PDF tools for all your document needs. Convert, merge, split, and edit PDF files with ease. Perfect for students, professionals, and anyone working with documents.
+                </p>
+                <a href="https://prabjot2008singh.github.io/tools/" target="_blank" class="visit-btn">
+                    Visit PDF Master →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            © 2025 Our Websites. All rights reserved.
+        </div>
+
+    </footer>
+</body>
+</html>
